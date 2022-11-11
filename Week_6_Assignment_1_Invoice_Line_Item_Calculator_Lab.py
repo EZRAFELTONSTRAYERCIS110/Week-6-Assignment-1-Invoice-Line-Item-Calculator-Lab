@@ -2,10 +2,10 @@
 
 def get_price():
     while True:
-        try:
-            price = float(input("Enter price:  "))
+        try:                                              #Try block. ??? 
+            price = float(input("Enter price:  "))   #float decimaled number. 
             return price
-        except ValueError:
+        except ValueError:              #data validation         #value error Catch all 
             print("Invalid decimal number. Please try again.")
 
 
@@ -13,9 +13,9 @@ def get_price():
 def get_quantity():
     while True:
         try:
-            quantity = int(input("Enter quatity:   "))
+            quantity = int(input("Enter quatity:   "))  #interger
             return quantity
-        except ValueError:
+        except ValueError:  #data validation
             print("Invalid interger. Please try again. ")
 
 
@@ -31,7 +31,7 @@ def main():
         total = price * quantity
 
         print()
-        print("PRICE:  ", f"{price: .2f}")
+        print("PRICE:  ", f"{price: .2f}") #formatting = print with 2 decimals. "{price: .2f}
         print("QUANTITY: ",  quantity)
         print("TOTAL:  ", f"{total: .2f}")
         answer = input("Enter another line item? (y/n):  ")
